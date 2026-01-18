@@ -545,3 +545,383 @@ h2 {
 	font-size: 12px;
 	color: #ccc;
 }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN - Ajouts complémentaires
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   TABLETTE (769px - 1024px)
+   Layout intermédiaire, lisible et aéré
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+	
+	/* --- NAVBAR : Réduction du gap et padding adapté --- */
+	.navbar-menu {
+		gap: 1.5rem;
+	}
+	
+	.navbar-container {
+		padding: 0 1rem;
+	}
+	
+	/* --- HERO SECTION : Ajustement des tailles de texte --- */
+	.titreprincipal p {
+		font-size: clamp(1.25rem, 3vw, 2rem);
+		padding: 0 1rem;
+	}
+	
+	.reserve-btn {
+		font-size: clamp(1rem, 2.5vw, 1.5rem);
+		padding: 1rem 1.5rem;
+	}
+	
+	/* --- VOITURE ANIMÉE : Réduction de la taille --- */
+	.car-overlay {
+		max-width: 450px;
+	}
+	
+	/* --- TITRE SECTION : Taille responsive --- */
+	h2 {
+		font-size: clamp(1.5rem, 4vw, 2.2rem);
+		margin-top: 10rem;
+		padding: 0 1rem;
+	}
+	
+	/* --- CARDS ROW : Réduction du gap entre les cartes --- */
+	.cards-row {
+		gap: 2rem;
+		padding: 0 1.5rem;
+	}
+	
+	/* --- DRIVER & VEHICLE CARDS : Largeur adaptée --- */
+	.driver-card,
+	.vehicle-card {
+		max-width: 350px;
+		min-height: auto;
+		padding: 1.5rem;
+	}
+	
+	.driver-photo {
+		width: 180px;
+		height: 180px;
+	}
+	
+	/* --- ICÔNES SUPPLÉMENTS : Gap réduit --- */
+	.sup-icons {
+		gap: 1rem;
+		padding: 0 1rem;
+	}
+	
+	.sup-icons img {
+		width: 55px;
+		height: 55px;
+	}
+	
+	.icon-label {
+		font-size: 0.875rem;
+	}
+	
+	/* --- FOOTER : Flexibilité accrue --- */
+	.footer-container {
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	.contact-info {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+	
+	.contact-info span {
+		font-size: 1rem;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE (≤ 768px)
+   Layouts horizontaux passent en colonnes, lisibilité optimale
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+	
+	/* --- NAVBAR : Menu hamburger style simplifié en colonne --- */
+	.navbar {
+		padding: 0.75rem 0;
+	}
+	
+	.navbar-container {
+		flex-direction: column;
+		gap: 1rem;
+		padding: 0.5rem 1rem;
+	}
+	
+	.navbar-logo img {
+		height: 45px;
+	}
+	
+	.navbar-menu {
+		gap: 1.25rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.navbar-menu a {
+		font-size: 0.9rem;
+		padding: 0.5rem;
+	}
+	
+	/* --- HERO SECTION : Hauteur adaptée et centrage mobile --- */
+	.background-container {
+		height: auto;
+		min-height: 80vh;
+		padding-top: 8rem;
+		padding-bottom: 6rem;
+		margin-top: -140px;
+	}
+	
+	.titreprincipal {
+		top: 30%;
+		width: 90%;
+	}
+	
+	.titreprincipal p {
+		font-size: clamp(1rem, 5vw, 1.5rem);
+		line-height: 1.4;
+		letter-spacing: 1px;
+	}
+	
+	/* --- BOUTON RÉSERVER : Taille tactile optimale (min 44px) --- */
+	.reserve-btn {
+		font-size: clamp(0.9rem, 4vw, 1.2rem);
+		padding: 0.875rem 1.25rem;
+		top: 50%;
+		min-height: 2.75rem;
+		min-width: 10rem;
+	}
+	
+	/* --- VOITURE ANIMÉE : Taille réduite pour mobile --- */
+	.car-overlay {
+		max-width: 280px;
+		bottom: -20px;
+	}
+	
+	/* --- TITRE SECTION H2 : Marges et taille adaptées --- */
+	h2 {
+		font-size: clamp(1.1rem, 5vw, 1.5rem);
+		margin-top: 6rem;
+		padding: 0 1rem;
+		line-height: 1.4;
+	}
+	
+	/* --- SECTION CONTENT : Padding réduit --- */
+	.content-section {
+		padding: 1.5rem 1rem;
+	}
+	
+	/* --- CARDS ROW : Passage en colonne --- */
+	.cards-row {
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		margin: 2rem 0;
+		padding: 0 1rem;
+	}
+	
+	/* --- DRIVER CARD : Pleine largeur mobile --- */
+	.driver-card {
+		max-width: 100%;
+		min-height: auto;
+		padding: 1.5rem;
+	}
+	
+	.driver-photo {
+		width: 150px;
+		height: 150px;
+	}
+	
+	.driver-info h3 {
+		font-size: 1.4rem;
+	}
+	
+	.driver-description {
+		font-size: 1rem;
+		text-align: left;
+	}
+	
+	.driver-experience {
+		font-size: 0.875rem;
+		padding: 0.75rem;
+	}
+	
+	.certification-badge {
+		font-size: 0.75rem;
+		padding: 0.4rem 0.75rem;
+	}
+	
+	.driver-certifications {
+		gap: 0.5rem;
+	}
+	
+	/* --- VEHICLE CARD : Pleine largeur mobile --- */
+	.vehicle-card {
+		max-width: 100%;
+		min-height: auto;
+		padding: 1.5rem;
+	}
+	
+	.vehicle-card h3 {
+		font-size: 1.3rem;
+	}
+	
+	.vehicle-card p {
+		font-size: 1rem;
+	}
+	
+	.vehicle-card ul li {
+		font-size: 0.9rem;
+	}
+	
+	/* --- SEPARATOR : Largeur adaptée --- */
+	.horizontal-separator {
+		max-width: 90%;
+		margin: 2rem auto 0 auto;
+	}
+	
+	/* --- SUP CENTER : Marges réduites --- */
+	.sup-center {
+		margin-top: 2rem;
+	}
+	
+	/* --- ICÔNES SUPPLÉMENTS : Grille 2x2 sur mobile --- */
+	.sup-icons {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1.5rem;
+		max-width: 100%;
+		padding: 0 1rem;
+		margin: 1.5rem auto 2rem auto;
+	}
+	
+	.sup-icons .icon-wrapper {
+		flex: 0 0 40%;
+		max-width: 45%;
+	}
+	
+	.sup-icons img {
+		width: 50px;
+		height: 50px;
+	}
+	
+	.icon-label {
+		font-size: 0.8rem;
+		margin-top: 0.5rem;
+	}
+	
+	/* --- FOOTER : Layout en colonne sur mobile --- */
+	.footer {
+		padding: 1.5rem 0;
+	}
+	
+	.footer-container {
+		flex-direction: column;
+		gap: 1.5rem;
+		text-align: center;
+		padding: 0 1rem;
+	}
+	
+	.footer-logo img {
+		height: 80px !important;
+		width: auto !important;
+	}
+	
+	.footer-contact {
+		width: 100%;
+	}
+	
+	.contact-info {
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	
+	.contact-info span {
+		font-size: 0.9rem;
+		white-space: normal;
+	}
+	
+	.footer-icons {
+		justify-content: center;
+	}
+	
+	.footer-icons img {
+		width: 2rem;
+		height: 2rem;
+	}
+	
+	.footer-bottom {
+		padding: 0.75rem;
+	}
+	
+	.footer-bottom p {
+		font-size: 0.7rem;
+	}
+	
+	/* --- STATISTIQUES (si présentes) : Colonne sur mobile --- */
+	.reviews-stats {
+		flex-direction: column;
+		gap: 1.5rem;
+		padding: 1.5rem;
+	}
+	
+	.stat h3 {
+		font-size: 1.75rem;
+	}
+	
+	.stat p {
+		font-size: 1rem;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   TRÈS PETIT ÉCRAN (≤ 480px)
+   Ajustements supplémentaires pour petits smartphones
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+	
+	/* --- HERO : Ajustements finaux --- */
+	.background-container {
+		min-height: 70vh;
+		padding-top: 6rem;
+	}
+	
+	.titreprincipal {
+		top: 25%;
+	}
+	
+	.reserve-btn {
+		top: 45%;
+		padding: 0.75rem 1rem;
+	}
+	
+	.car-overlay {
+		max-width: 220px;
+	}
+	
+	/* --- CARDS : Padding minimal --- */
+	.driver-card,
+	.vehicle-card {
+		padding: 1rem;
+	}
+	
+	.driver-photo {
+		width: 120px;
+		height: 120px;
+	}
+	
+	/* --- ICÔNES : Une seule colonne si nécessaire --- */
+	.sup-icons .icon-wrapper {
+		flex: 0 0 45%;
+	}
+}
