@@ -94,6 +94,47 @@ body {
 	color: #FFB6A3;
 }
 
+/* === LANGUAGE SELECTOR (BOUTONS AVEC IMAGES) === */
+.language-selector {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+}
+
+.lang-btn {
+	background: transparent;
+	border: 2px solid transparent;
+	cursor: pointer;
+	padding: 0.4rem;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	opacity: 0.7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lang-btn img {
+	width: 35px;
+	height: 25px;
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.lang-btn:hover {
+	opacity: 1;
+	border-color: #FFB6A3;
+	background: rgba(255, 182, 163, 0.1);
+	transform: scale(1.1);
+}
+
+.lang-btn.active {
+	opacity: 1;
+	border-color: #FFB6A3;
+	background: rgba(255, 182, 163, 0.25);
+	box-shadow: 0 0 10px rgba(255, 182, 163, 0.3);
+}
+
 .main-content {
 	flex: 1;
 	display: flex;
@@ -149,6 +190,13 @@ p {
 	background: linear-gradient(135deg, #2E1425, #2E1425);
 	transform: translate(-50%, -50%) scale(1.05);
 	box-shadow: 0 12px 35px rgba(0, 123, 255, 0.4);
+}
+
+/* Version desktop optimisée */
+@media (min-width: 1025px) {
+	.reserve-btn {
+		top: 55%;
+	}
 }
 	/* Voiture roulante */
 .car-overlay {
@@ -565,6 +613,20 @@ h2 {
 		padding: 0 1rem;
 	}
 	
+	/* --- LANGUAGE SELECTOR : Ajustement responsive tablette --- */
+	.language-selector {
+		gap: 0.6rem;
+	}
+	
+	.lang-btn {
+		padding: 0.35rem;
+	}
+	
+	.lang-btn img {
+		width: 30px;
+		height: 22px;
+	}
+	
 	/* --- HERO SECTION : Ajustement des tailles de texte --- */
 	.titreprincipal p {
 		font-size: clamp(1.25rem, 3vw, 2rem);
@@ -673,6 +735,24 @@ h2 {
 		padding: 0.5rem;
 	}
 	
+	/* --- LANGUAGE SELECTOR : Ajustement mobile --- */
+	.language-selector {
+		gap: 0.5rem;
+		order: -1;
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 0.5rem;
+	}
+	
+	.lang-btn {
+		padding: 0.3rem;
+	}
+	
+	.lang-btn img {
+		width: 32px;
+		height: 24px;
+	}
+	
 	/* --- HERO SECTION : Hauteur adaptée et centrage mobile --- */
 	.background-container {
 		height: auto;
@@ -699,14 +779,18 @@ h2 {
 	
 	/* --- BOUTON RÉSERVER : Centré et taille tactile optimale (min 44px) --- */
 	.reserve-btn {
-		font-size: clamp(0.9rem, 4vw, 1.2rem);
-		padding: 0.875rem 1.25rem;
-		top: 55%;
-		left: 50%;
-		transform: translateX(-50%);
-		min-height: 2.75rem;
-		min-width: 10rem;
-		text-align: center;
+		font-size: clamp(0.9rem, 4vw, 1.2rem) !important;
+		padding: 0.875rem 1.25rem !important;
+		top: 55% !important;
+		left: 50% !important;
+		min-height: 2.75rem !important;
+		min-width: 10rem !important;
+		text-align: center !important;
+		transform: translateX(-50%) !important;
+	}
+	
+	.reserve-btn:hover {
+		transform: translateX(-50%) scale(1.05) !important;
 	}
 	
 	/* --- VOITURE ANIMÉE : Taille réduite pour mobile --- */

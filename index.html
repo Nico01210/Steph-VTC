@@ -19,11 +19,16 @@
             <li><a href="#supplements">Suppléments</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="fr" title="Français"><img src="images/Flag_of_France.svg.webp" alt="FR"></button>
+            <button class="lang-btn" data-lang="en" title="English"><img src="images/british-flag-uk.webp" alt="EN"></button>
+            <button class="lang-btn" data-lang="pt" title="Português"><img src="images/Flag_of_Portugal.svg.webp" alt="PT"></button>
+        </div>
     </div>
 </nav>
 
 <div class="background-container">
-        <a href="https://wa.me/351963215368?text=Bonjour%20Stephan%2C%20seriez%20vous%20disponible%20le..." class="reserve-btn" target="_blank">Réserver en ligne</a>
+        <a href="https://wa.me/351963215368?text=Bonjour%20Stephan%2C%20seriez%20vous%20disponible%20le..." class="reserve-btn" target="_blank">Réserver votre course</a>
         <div class="titreprincipal">
         <p>RÉSERVEZ VOTRE CHAUFFEUR PRIVÉ</p>
         </div>
@@ -115,28 +120,38 @@
         </div>
         
         <div class="footer-bottom">
-            <p>Copyright 2025 Nicolas VTC. Tous droits réservés.</p>
+            <p>Copyright 2025 Nicolas Perret. Tous droits réservés.</p>
         </div>
     </footer>
 </div>
 </div>
 
+    <script src="translations.js"></script>
     <script>
- // Hero section
-            const bookBtn = document.querySelector('.reserve-btn');
-            if (bookBtn && bookBtn.textContent.includes('Réserver') || bookBtn.textContent.includes('Book') || bookBtn.textContent.includes('Reservar')) {
-                bookBtn.textContent = lang.hero.bookBtn;
-            }
+        // Événements pour les boutons de langue avec images
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    changeLanguage(btn.dataset.lang);
+                });
+            });
+        });
 
-            const titleText = document.querySelector('.titreprincipal p');
-            if (titleText) {
-                titleText.textContent = lang.hero.title;
-            }
-// Footer copyright
-            const footerBottom = document.querySelector('.footer-bottom p');
-            if (footerBottom) {
-                footerBottom.textContent = lang.footer.copyright;
-            }
+        // Hero section
+        const bookBtn = document.querySelector('.reserve-btn');
+        if (bookBtn && bookBtn.textContent.includes('Réserver') || bookBtn.textContent.includes('Book') || bookBtn.textContent.includes('Reservar')) {
+            bookBtn.textContent = lang.hero.bookBtn;
+        }
+
+        const titleText = document.querySelector('.titreprincipal p');
+        if (titleText) {
+            titleText.textContent = lang.hero.title;
+        }
+        // Footer copyright
+        const footerBottom = document.querySelector('.footer-bottom p');
+        if (footerBottom) {
+            footerBottom.textContent = lang.footer.copyright;
+        }
     </script>
 </body>
 </html>
