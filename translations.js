@@ -125,7 +125,7 @@ const translations = {
 // === SYSTÈME DE GESTION DES LANGUES ===
 class LanguageManager {
   constructor() {
-    this.currentLang = localStorage.getItem('lang') || 'fr';
+    this.currentLang = localStorage.getItem('lang') || 'pt';
     this.init();
   }
 
